@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+    - name: Hello world action step
+      id: hello
+      uses: garg3133/issue-claimer-action@practice
+      with:
+        who-to-greet: 'Priyansh'
+    - name: Output Time
+      run: echo "The rime was ${{ steps.hello.outputs.time }}"
