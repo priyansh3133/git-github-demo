@@ -12,4 +12,4 @@ jobs:
         uses: garg3133/issue-claimer-action@greetings
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-comment: 'Hello there! :tada:'
+          body: 'Hello there! :tada:'
