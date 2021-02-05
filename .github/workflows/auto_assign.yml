@@ -1,0 +1,15 @@
+name: Issue Greeting
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  greet-the-contributor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Greet the contributor who opened the issue'
+        uses: garg3133/issue-claimer-action@greetings
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-comment: 'Hello there! :tada:
