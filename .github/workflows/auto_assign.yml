@@ -3,6 +3,8 @@ name: 'Issue Greeting'
 on:
   issues:
     types: [opened]
+  pull_request:
+    types: [opened]
 
 jobs:
   greet-the-contributor:
@@ -12,4 +14,5 @@ jobs:
         uses: garg3133/issue-claimer-action@greetings
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          body: 'Hello there! :tada:'
+          issue-comment: 'Hello there! :tada:'
+          pr-comment: "Hello, thanks for opening this PR :rocket:"
