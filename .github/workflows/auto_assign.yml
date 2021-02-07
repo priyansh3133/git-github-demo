@@ -14,5 +14,6 @@ jobs:
         uses: garg3133/issue-claimer-action@greetings
         with:
           token: ${{ secrets.BOT_ACCESS_TOKEN }}
+          is-oauth-token: true
           issue-message: 'Hello there, @contributor_name! :tada:'
           pr-message: "Hello, thanks for opening this PR :rocket:"
