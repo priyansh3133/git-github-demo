@@ -13,6 +13,6 @@ jobs:
       - name: 'Greet the contributor who opened the issue'
         uses: garg3133/issue-claimer-action@greetings
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-message: 'Hello there! :tada:'
+          token: ${{ secrets.BOT_ACCESS_TOKEN }}
+          issue-message: 'Hello there, @contributor_name! :tada:'
           pr-message: "Hello, thanks for opening this PR :rocket:"
