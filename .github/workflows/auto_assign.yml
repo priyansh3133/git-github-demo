@@ -15,5 +15,5 @@ jobs:
         with:
           token: ${{ secrets.BOT_ACCESS_TOKEN }}
           is-oauth-token: true
-          issue-message: 'Hello there, @contributor_name! :tada:'
+          issue-message: 'Hello there, thanks for opening your first issue. We welcome you to the community!'
           pr-message: "Hello, thanks for opening this PR :rocket:"
