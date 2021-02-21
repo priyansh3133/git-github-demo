@@ -1,0 +1,14 @@
+name: 'Claim issue'
+
+on:
+  issue_comment:
+    types: created
+
+jobs:
+  assign-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Assign the issue'
+        uses: garg3133/issue-claimer-action@issue-claim
+        with:
+          token: ${{ secrets.BOT_ACCESS_TOKEN }}
