@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Assign the issue'
-        uses: garg3133/issue-claimer-action@issue-claim
+        uses: garg3133/issue-claimer-action/bot-commands@actions_in_subdirectories
         with:
           token: ${{ secrets.BOT_ACCESS_TOKEN }}
