@@ -1,0 +1,18 @@
+name: 'Issue Greeting'
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+
+jobs:
+  greet-the-contributor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Greet the contributor who opened the issue'
+        uses: garg3133/issue-claimer-action@greetings
+        with:
+          token: ${{ secrets.BOT_ACCESS_TOKEN }}
+          issue-message: 'Hello there, @contributor_name! :tada:'
+          pr-message: "Hello, thanks for opening this PR :rocket:"
